@@ -6,11 +6,6 @@ namespace N_ableDotNet
     {
         static void Main(string[] args)
         {
-            //ConvertExample.ConvertExampleDoubleToInt();
-            //ConvertExample.ConvertExampleFloatToInt();
-            //ConvertExample.ConvertExampleStringToInt();
-
-            ConvertExample.ConvertExampleDataTimeToString();
         }
     }
 }

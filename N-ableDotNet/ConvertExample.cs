@@ -8,52 +8,38 @@ namespace N_ableDotNet
 {
     public static class ConvertExample
     {
-        public static void ConvertExampleDoubleToInt()
+        public const decimal USDRate = 2.589m;
+
+        public static int ConvertDoubleToInt(double dNumber)
         {
-            double temp = 12.3654895239;
-            Console.WriteLine($"Double: {temp} \nConvert to int: {Convert.ToInt32(temp)}");
+            return Convert.ToInt32(dNumber);
         }
 
-        public static void ConvertExampleStringToInt()
+        public static int? ConvertStringToInt(string sNumber)
         {
-            var temp = "123";
-            Console.WriteLine($"String: {temp} \nConvert to int: {Convert.ToInt32(temp)}");
+            int numer = 0;
 
-            try
+            if (int.TryParse(sNumber, out numer))
             {
-                temp = "qwe";
-                Console.WriteLine($"String: {temp}");
-                Console.WriteLine($"Convert to int: {Convert.ToInt32(temp)}");
+                return numer;
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+
+            return null;
         }
 
-        public static void ConvertExampleFloatToInt()
+        public static int ConvertFloatToInt(float fNumber)
         {
-            float temp = 12.365483749f;
-            Console.WriteLine($"Float: {temp} \nConvert to int: {Convert.ToInt32(temp)}");
+            return Convert.ToInt32(fNumber);
         }
 
-        public static void ConvertExampleDataTimeToString()
+        public static string ConvertDataTimeToString(DateTime data, string format = "d")
         {
-            DateTime data = new DateTime();
-            Console.WriteLine($"DataTime convert to string: {data.ToString()}");
-
-            data = DateTime.UtcNow;
-            Console.WriteLine($"DataTime convert to string: {data.ToString("d")}");
-            Console.WriteLine($"DataTime convert to string: {data.ToString("D")}");
-            Console.WriteLine($"DataTime convert to string: {data.ToString("hh:mm:ss")}");
-            Console.WriteLine($"DataTime convert to string: {data.ToString("dd.MM.yyyy hh:mm:ss")}");
-            Console.WriteLine($"DataTime convert to string: {data.ToString("dddd MMMM yyyy")}");
+            return data.ToString(format);
         }
 
-        public static void ConvertExampleDecimal()
+        public static decimal ConvertBYNtoUSD(decimal byn)
         {
-            decimal temp = 1.25M;
-            //Decimal.
+            return byn / USDRate;
         }
     }
 }

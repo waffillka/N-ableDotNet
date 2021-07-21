@@ -14,7 +14,7 @@ namespace N_ableDotNet
             b = a - b;
             a -= b;
         }
-
+        
         public static double Average(params int[] numbers)
         {
             int sum = 0;
