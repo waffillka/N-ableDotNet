@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace N_ableDotNet.Statistics
 {
-    class Subject
+    public class Subject
     {
         public string NameSubject { get; }
         public float Mark { get; }

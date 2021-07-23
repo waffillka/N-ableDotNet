@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace N_ableDotNet.Structs
+﻿namespace N_ableDotNet.Structs
 {
-    class Square
+    public class Square
     {
-        private Point pointLeftUp; 
-        private Point pointRightDown;
+        private readonly Point pointLeftUp;
+        private readonly Point pointRightDown;
 
         public Square(Point pointLeftUp, Point pointRightDown)
         {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace N_ableDotNet
+﻿namespace N_ableDotNet
 {
     public static class Trash
     {
@@ -14,7 +8,7 @@ namespace N_ableDotNet
             b = a - b;
             a -= b;
         }
-        
+
         public static double Average(params int[] numbers)
         {
             int sum = 0;
